@@ -14,6 +14,7 @@
 		5E9540751F6A3204009F5697 /* test_drag_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9540741F6A3204009F5697 /* test_drag_2Tests.swift */; };
 		5E9540801F6A3204009F5697 /* test_drag_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95407F1F6A3204009F5697 /* test_drag_2UITests.swift */; };
 		5E95408E1F6A3248009F5697 /* mainContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95408D1F6A3248009F5697 /* mainContainerView.swift */; };
+		5EC4B1191F6F2B4100D8695C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC4B1181F6F2B4100D8695C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5E95407F1F6A3204009F5697 /* test_drag_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_drag_2UITests.swift; sourceTree = "<group>"; };
 		5E9540811F6A3204009F5697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E95408D1F6A3248009F5697 /* mainContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainContainerView.swift; sourceTree = "<group>"; };
+		5EC4B1181F6F2B4100D8695C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				5E9540621F6A3204009F5697 /* AppDelegate.swift */,
 				5E9540641F6A3204009F5697 /* ViewController.swift */,
+				5EC4B1181F6F2B4100D8695C /* Extensions.swift */,
 				5E95408D1F6A3248009F5697 /* mainContainerView.swift */,
 				5E9540661F6A3204009F5697 /* Assets.xcassets */,
 				5E9540681F6A3204009F5697 /* Main.storyboard */,
@@ -261,6 +264,7 @@
 				5E9540651F6A3204009F5697 /* ViewController.swift in Sources */,
 				5E9540631F6A3204009F5697 /* AppDelegate.swift in Sources */,
 				5E95408E1F6A3248009F5697 /* mainContainerView.swift in Sources */,
+				5EC4B1191F6F2B4100D8695C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +506,7 @@
 				5E9540861F6A3204009F5697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E9540871F6A3204009F5697 /* Build configuration list for PBXNativeTarget "test drag 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +515,7 @@
 				5E9540891F6A3204009F5697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E95408A1F6A3204009F5697 /* Build configuration list for PBXNativeTarget "test drag 2UITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +524,7 @@
 				5E95408C1F6A3204009F5697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
