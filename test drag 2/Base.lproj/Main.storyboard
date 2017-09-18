@@ -695,7 +695,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zsx-Zy-Izc">
-                                        <rect key="frame" x="222" y="383" width="33" height="87"/>
+                                        <rect key="frame" x="222" y="383" width="32" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="microphone_icon_80x80" id="g7f-Es-OcO"/>
                                     </imageView>

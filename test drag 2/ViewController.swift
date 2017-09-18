@@ -39,14 +39,18 @@ class ViewController: NSViewController {
         centerMainView =  NSPoint(x: self.view.frame.width/2, y: self.view.frame.size.height/2)
 
         
-        mic1Position = mic1View.frame .origin
+        mic1Position = mic1View.frame.origin
         let dragMic1 = NSPanGestureRecognizer(target: self, action: #selector(handleDragMic1(sender:)))
         mic1View.addGestureRecognizer(dragMic1) //add the gesture recognizer just created to mic1View
         
         mic1View.frame.origin.x = 0
         mic1View.frame.origin.y=0
         
-        Swift.print(centerMainView)
+        Swift.print(" centre = \(centerMainView)")
+        Swift.print(" origin = \(mic1View.frame.origin)")
+        Swift.print(" frame = \(mic1View.frame)")
+        Swift.print(" reference point = \(mic1View.referencePoint)")
+        
 
         
     }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Cocoa
 
 extension Int {
     var degreesToRadians: Double { return Double(self) * .pi / 180 }
@@ -16,6 +16,18 @@ extension FloatingPoint {
     var degreesToRadians: Self { return self * .pi / 180 }
     var radiansToDegrees: Self { return self * 180 / .pi }
 }
+
+
+
+extension NSView{
+    
+    
+    var referencePoint: NSPoint {return NSPoint(x:(self.frame.origin.x + self.frame.width/2), y:self.frame.origin.y + self.frame.height)}
+    
+    
+    
+}
+
 
 
 
