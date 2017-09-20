@@ -701,15 +701,32 @@
                                     </imageView>
                                 </subviews>
                             </customView>
+                            <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9k-em-zEu" userLabel="mic1CustomView" customClass="Mic1CustomView" customModule="test_drag_2" customModuleProvider="target">
+                                <rect key="frame" x="418" y="352" width="163" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="mic1LayerView" destination="c9k-em-zEu" id="T3u-ZO-BoO"/>
                         <outlet property="mic1View" destination="Zsx-Zy-Izc" id="yag-yL-vAj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="81" y="1214"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wu7-JU-o8m">
+            <objects>
+                <viewController id="N6T-O8-GEi" sceneMemberID="viewController">
+                    <view key="view" id="cE2-02-Qh9">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="me4-VM-zbc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

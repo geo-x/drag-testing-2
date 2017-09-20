@@ -11,10 +11,7 @@ import Cocoa
 
 
 
-
-
-var centerMainView:NSPoint = NSPoint(x: 0, y: 0)
-
+let mic1Layer = CALayer()
 
 
 
@@ -29,6 +26,9 @@ class ViewController: NSViewController {
     
     
     @IBOutlet weak var mic1View: NSImageView!
+   
+  
+   
     
     var mic1Position:CGPoint!
     
@@ -36,17 +36,24 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        centerMainView =  NSPoint(x: self.view.frame.width/2, y: self.view.frame.size.height/2)
-
+      
         
-        mic1Position = mic1View.frame.origin
+ 
+        
+     
+        
+        
         let dragMic1 = NSPanGestureRecognizer(target: self, action: #selector(handleDragMic1(sender:)))
         mic1View.addGestureRecognizer(dragMic1) //add the gesture recognizer just created to mic1View
         
+    
+     
+        
+         
         mic1View.frame.origin.x = 0
         mic1View.frame.origin.y=0
         
-        Swift.print(" centre = \(centerMainView)")
+        Swift.print(" centre = \(soundSourceCenter)")
         Swift.print(" origin = \(mic1View.frame.origin)")
         Swift.print(" frame = \(mic1View.frame)")
         Swift.print(" reference point = \(mic1View.referencePoint)")
@@ -73,29 +80,48 @@ class ViewController: NSViewController {
 
     func handleDragMic1(sender: NSPanGestureRecognizer ){
         
+        
+        Swift.print("xxxxxxx")
+        
         let translation = sender.translation(in: view)
         mic1View.frame.origin = CGPoint(x: mic1View.frame.origin.x + translation.x, y: mic1View.frame.origin.y + translation.y)
         sender.setTranslation(CGPoint.zero, in: view)
-       var micRotation = rotateFrame(micPositon: mic1View.frame.origin)
-        micRotation = micRotation * 57.2958
-        Swift.print(micRotation)
-        mic1View.frameRotation = micRotation
+        
+        var micRotation = rotateFrame(micPositon: mic1View.referencePoint)
+        
+        Swift.print("the mic referencePoint --- \(mic1View.referencePoint)")
+        Swift.print("the mic rotation is --- \(micRotation)")
+        Swift.print("the mic rotation returned to calling --- \(rotateFrame(micPositon: mic1View.referencePoint))")
+
+        
+        mic1View.frameRotation = micRotation + 90// degrees
         
     } // end dragMic1 func
     
     
-    func rotateFrame(micPositon:NSPoint) -> CGFloat {
-        
-        var sideUp = abs(micPositon.y - centerMainView.y)
-        var sideAcross = abs(micPositon.x - centerMainView.x)
-        return atan( sideUp / sideAcross)
-        
-        
-        
-    }
+    
     
     
     
   
 } //end class
+
+func rotateFrame(micPositon:NSPoint) -> CGFloat {
+    
+    
+    
+    let sideUp =  (micPositon.y - soundSourceCenter.y)
+    let sideAcross = (micPositon.x - soundSourceCenter.x)
+    
+    Swift.print(" mic origin position + \(micPositon)")
+    Swift.print(" deltaY + \(micPositon.y - soundSourceCenter.y)")
+    Swift.print(" deltaX + \(micPositon.x - soundSourceCenter.x)")
+    
+    //Swift.print(" return value vv \((atan (-1.0) as Float).radiansToDegrees) ")    //atan returns radians
+    
+    Swift.print(" return value \(atan(sideUp / sideAcross).radiansToDegrees) ")
+    
+    return atan(sideUp / sideAcross).radiansToDegrees
+    
+}
 
