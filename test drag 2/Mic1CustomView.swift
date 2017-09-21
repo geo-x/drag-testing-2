@@ -14,10 +14,14 @@ import Cocoa
 
 class Mic1CustomView: NSView {
     
+    var micPosition: CGPoint = CGPoint(x: 0, y: 0) // initialize a value
+    var targetPoint: CGPoint = soundSourcePosition
+    
+    
+    
      override func awakeFromNib() {
        
-        Swift.print(self.frame.origin)
-        self.frame.origin = NSPoint(x: 200, y: 200)
+       self.frame.origin = NSPoint(x: 200, y: 200)
         
         
            }
@@ -59,3 +63,6 @@ class Mic1CustomView: NSView {
     }
     
 }
+
+
+

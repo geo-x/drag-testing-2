@@ -12,7 +12,7 @@ import Cocoa
 
 
 
- var soundSourceCenter = NSPoint(x: 0, y: 0)
+
 
 
 
@@ -33,9 +33,9 @@ class mainContainerView: NSView {
         
         super.draw(dirtyRect)
         
-        soundSourceCenter = NSPoint(x: self.frame.width/2, y: self.frame.height * 0.75)
         
-        drawSoundSource(center: soundSourceCenter)
+        
+        drawSoundSource(center: soundSourcePosition)
         
         self.layer?.backgroundColor = CGColor(
             red: 0.2,
